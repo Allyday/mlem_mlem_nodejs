@@ -22,12 +22,16 @@ app.get('/login', (req, res) => {
   res.send(obj);
 });
 
-app.get("/cart",(req,res) => {
-  res.render("cart");
+app.get("/menu",(req,res) =>{
+  res.render("menu");
 });
 
 app.get("/details",(req,res) =>{
   res.render("product-details");
+});
+
+app.get("/cart",(req,res) => {
+  res.render("cart");
 });
 
 app.get("/about",(req,res) =>{
