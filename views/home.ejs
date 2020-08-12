@@ -4,21 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Mlem mlem</title>
-  <base href="https://mlem-mlem-nodejs.herokuapp.com/" target="_self">
   <link rel="stylesheet" type="text/css" href="lbs/boostrap_3.3.7/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="css/home.css" />
   <link rel="icon" href="data/images/burger-icon-colored.svg">
   <!-- font imports -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <div class="body">
     <div id="landing">
       <div id="main-menu">
+        <img id="logo"
+          src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2018/02/logo-header-retina.png" />
         <div>
-          <a href="details.html" class="sans-serif navigation-menu">HOME</a>
+          <a id="home-link" href="home.html" class="sans-serif navigation-menu">HOME</a>
         </div>
         <div>
           <a href="about.html" class="sans-serif navigation-menu">ABOUT US</a>
@@ -54,7 +58,65 @@
                 src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/05/hotdog.jpg" />
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/sandwich-with-veg-bacon.jpg" />
+            </div>
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/sandwich-with-eggs-and-ham.jpg" />
+            </div>
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/sandwich-toast.jpg" />
+            </div>
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/pizza1.jpg" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/pizza2.jpg" />
+            </div>
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/burger5.jpg" />
+            </div>
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/05/hotdog.jpg" />
+            </div>
+            <div class="col-md-3">
+              <img class="preview-menu"
+                src="https://demo.myherothemes.com/burgy/wp-content/uploads/sites/22/2015/06/sandwich-with-veg-bacon.jpg" />
+            </div>
+          </div>
         </div>
+        <div class="container">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <h1 class="reviews sans-serif"><img src="imgs/quote.png" class="quote" />
+                  Great burgers. Would recommend to all burger fans.</h1>
+              </div>
+              <div class="item">
+                <h1 class="reviews sans-serif"><img src="imgs/quote.png" class="quote" />
+                  Took a 50 kilometres ride just to eat here. It was totally worth it!</h1>
+              </div>
+              <div class="item">
+                <h1 class="reviews sans-serif"><img src="imgs/quote.png" class="quote" />
+                  Literally the most beautiful website ever.</h1>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
