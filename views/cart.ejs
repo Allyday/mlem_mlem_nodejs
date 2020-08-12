@@ -1,227 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cart</title>
-    <link rel="stylesheet" href="/lbs/boostrap_3.3.7/css/bootstrap.css"/>
-    <link rel="stylesheet" href="/css/cart.css"/>
+    <link rel="stylesheet" href="/libs/bootstrap_3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/lbs/fontawesome/css/all.css"/>
-    <link rel="icon" href="/imgs/burger-icon-colored.svg"/>
+    <link rel="stylesheet" href="/libs/fontawesome/css/all.css" />
+    <link rel="icon" href="/imgs/burger-icon-colored.svg" />
 </head>
+
 <body>
-<div class="section">
-    <!--header-->
-    <div class="header">
-        <div class="section-header-top">
-            <div class="container contain-img">
+    <div class="section">
+        <!--header-->
+        <div class="header">
+            <div class="section-header-top">
+                <div class="container contain-img">
 
+                </div>
             </div>
-        </div>
 
-        <div class="section-header-bottom">
-            <div class="container1 contain-list">
-                <div class="background">
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="/details">Details</a></li>
-                        <li><a href="/about">About us</a></li>
-                    </ul>
+            <div class="section-header-bottom">
+                <div class="container1 contain-list">
+                    <div class="background">
+                        <ul class="menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="/details">Details</a></li>
+                            <li><a href="/about">About us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--cart-->
+        <!--cart-->
 
-    <div class="section-tittle">
-        <div class="container">
-            <a href="#"><i class="fas fa-home"></i></a><p> / Shopping Cart </p>
+        <div class="section-tittle">
+            <div class="container">
+                <a href="#"><i class="fas fa-home"></i></a>
+                <p> / Shopping Cart </p>
+            </div>
         </div>
-    </div>
-    <section class="section">
-        <div class="container">
-            <div class="row">
-                <div class="content col-md-8">
-                    <form action="#" method="get">
-                        <table class="table table-hover table-striped">
-                            <thead>
-                                <th class="text-center">Image</th>
-                                <th class="text-center">Name</th>
-                                <th class="text-center">Quantity</th>
-                                <th class="text-center">Unit price</th>
-                                <th class="text-center"> Total </th>
-                            </thead>
-                            <tbody class="text-center" >
-                                <tr class="piza">
-                                    <td><img src="/imgs/pizza3.jpg"></td>
-                                    <td>Pizza</td>
-                                    <td>
-                                        <input type="number" name="quantityPiza" value="1" min="1" max="10" style="text-align: center"/>
-                                        <button class="btn" onclick="updatePiza()" type="button" title="Update"><i class="fas fa-sync-alt"></i></button>
-                                        <button class="btn" onclick="removePiza()" type="button" title="Remove"><i class="fas fa-times"></i></button>
-                                    </td>
-                                    <td id="pricePiza">50</td>
-                                    <td id="sumPiza">50</td>
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="content col-md-8">
+                        <form action="#" method="get">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <th class="text-center">Image</th>
+                                    <th class="text-center">Name</th>
+                                    <th class="text-center">Quantity</th>
+                                    <th class="text-center">Unit price</th>
+                                    <th class="text-center"> Total </th>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr class="piza">
+                                        <td><img src="/imgs/pizza3.jpg"></td>
+                                        <td>Pizza</td>
+                                        <td>
+                                            <input type="number" name="quantityPiza" value="1" min="1" max="10"
+                                                style="text-align: center" />
+                                            <button class="btn" onclick="updatePiza()" type="button" title="Update"><i
+                                                    class="fas fa-sync-alt"></i></button>
+                                            <button class="btn" onclick="removePiza()" type="button" title="Remove"><i
+                                                    class="fas fa-times"></i></button>
+                                        </td>
+                                        <td id="pricePiza">50</td>
+                                        <td id="sumPiza">50</td>
+                                    </tr>
+
+                                    <!--                            <tr class="hotdog">-->
+                                    <!--                                <td><img src="imgs/hotdog525.jpg"></td>-->
+                                    <!--                                <td>Hotdog</td>-->
+                                    <!--                                <td>-->
+                                    <!--                                    <input type="number" name="quantityHotdog" value="1" min="1" max="10" style="text-align: center"/>-->
+                                    <!--                                    <button class="btn"  type="button" title="Update"><i class="fas fa-sync-alt"></i></button>-->
+                                    <!--                                    <button class="btn" type="button" title="Remove"><i class="fas fa-times"></i></button>-->
+                                    <!--                                </td>-->
+                                    <!--                                <td>12</td>-->
+                                    <!--                                <td id="sumHotdog">12</td>-->
+                                    <!--                            </tr>-->
+
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+
+                    <aside class="aside col-md-4" onmouseenter="enter()" onmouseleave="leave()">
+                        <div class="tittle">
+                            WHAT WOULD YOU LIKE TO DO NEXT ?
+                            <div id="color"></div>
+                        </div>
+                        <div class="coupon">
+                            <a class="tab" href="javascript:void(0);" onclick="btncoupon()">
+                                <p>USE COUPON CODE</p>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="fix" id="coupon">
+                                <p>Enter your coupon here</p><br />
+                                <form action="#" method="get">
+                                    <input type="text" name="coupon" placeholder="Enter your coupon here" />
+                                    <button type="button" class="btn ">Apply</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="gift">
+                            <a class="tab" href="javascript:void(0);" onclick="btngift()">
+                                <p>USE GIFT CERTIFICATE</p><i class="fas fa-arrow-right"></i>
+                            </a>
+                            <div class="fix" id="gift">
+                                <p>Enter your gift certificate code here</p>
+                                <form action="#" method="get">
+                                    <input type="text" name="gift" placeholder="Enter your gift code" />
+                                    <button type="button" class="btn">Apply</button>
+                                </form>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Sub-total:</td>
+                                    <td class="text-right" id="Sub-total">50</td>
                                 </tr>
-
-    <!--                            <tr class="hotdog">-->
-    <!--                                <td><img src="imgs/hotdog525.jpg"></td>-->
-    <!--                                <td>Hotdog</td>-->
-    <!--                                <td>-->
-    <!--                                    <input type="number" name="quantityHotdog" value="1" min="1" max="10" style="text-align: center"/>-->
-    <!--                                    <button class="btn"  type="button" title="Update"><i class="fas fa-sync-alt"></i></button>-->
-    <!--                                    <button class="btn" type="button" title="Remove"><i class="fas fa-times"></i></button>-->
-    <!--                                </td>-->
-    <!--                                <td>12</td>-->
-    <!--                                <td id="sumHotdog">12</td>-->
-    <!--                            </tr>-->
-
+                                <tr>
+                                    <td>Service (50%):</td>
+                                    <td class="text-right" id="service">25</td>
+                                </tr>
+                                <tr>
+                                    <td>VAT (10%):</td>
+                                    <td class="text-right" id="VAT">5</td>
+                                </tr>
+                                <tr>
+                                    <td>Total:</td>
+                                    <td class="text-right" id="total">80</td>
+                                </tr>
+                                <tr>
+                                    <td>Currency unit:</td>
+                                    <td class="text-right">$</td>
+                                </tr>
                             </tbody>
                         </table>
-                    </form>
-                </div>
-
-                <aside class="aside col-md-4" onmouseenter="enter()" onmouseleave="leave()">
-                    <div class="tittle">
-                        WHAT WOULD YOU LIKE TO DO NEXT ?
-                        <div id="color"></div>
-                    </div>
-                    <div class="coupon">
-                        <a class="tab" href="javascript:void(0);" onclick="btncoupon()">
-                            <p>USE COUPON CODE</p>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <div class="fix" id="coupon">
-                            <p>Enter your coupon here</p><br/>
-                            <form action="#" method="get">
-                                <input type="text" name="coupon" placeholder="Enter your coupon here"/>
-                                <button type="button" class="btn ">Apply</button>
-                            </form>
+                        <div class="buton">
+                            <button type="button" href="#" class="shopping btn btn-success"><i
+                                    class="fas fa-arrow-left"></i>&ensp;SHOPPING</button>
+                            <button type="button" class="checkout btn btn-info" data-toggle="modal"
+                                data-target="#myModal">CHECKOUT &ensp;<i class="fas fa-arrow-right"></i></button>
                         </div>
-                   </div>
-                    <div class="gift">
-                        <a class="tab" href="javascript:void(0);" onclick="btngift()"><p>USE GIFT CERTIFICATE</p><i class="fas fa-arrow-right"></i></a>
-                    <div class="fix" id="gift">
-                            <p>Enter your gift certificate code here</p>
-                            <form action="#" method="get">
-                                <input type="text" name="gift" placeholder="Enter your gift code"/>
-                                <button type="button" class="btn">Apply</button>
-                            </form>
-                        </div>
-                    </div>
-                    <table class="table">
-                        <tbody >
-                            <tr>
-                                <td>Sub-total:</td>
-                                <td class="text-right" id="Sub-total">50</td>
-                            </tr>
-                            <tr>
-                                <td>Service (50%):</td>
-                                <td class="text-right" id="service">25</td>
-                            </tr>
-                            <tr>
-                                <td>VAT (10%):</td>
-                                <td class="text-right" id="VAT">5</td>
-                            </tr>
-                            <tr>
-                                <td>Total:</td>
-                                <td class="text-right" id="total">80</td>
-                            </tr>
-                            <tr>
-                                <td>Currency unit:</td>
-                                <td class="text-right">$</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="buton">
-                        <button type="button" href="#" class="shopping btn btn-success"><i class="fas fa-arrow-left"></i>&ensp;SHOPPING</button>
-                        <button type="button"  class="checkout btn btn-info" data-toggle="modal" data-target="#myModal">CHECKOUT &ensp;<i class="fas fa-arrow-right"></i></button>
-                    </div>
-                    <!-- popup -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Payment success</h4>
-                                </div>
-                                <div class="modal-body">Chúng tôi sẽ giao hàng đến trong tuần này. Bạn nhớ chú ý điện thoại nhé !!!<br/>
-                                    Thank you for watching. See you next times.
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                        <!-- popup -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Payment success</h4>
+                                    </div>
+                                    <div class="modal-body">Chúng tôi sẽ giao hàng đến trong tuần này. Bạn nhớ chú ý
+                                        điện thoại nhé !!!<br />
+                                        Thank you for watching. See you next times.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </aside>
+                    </aside>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
-<script type="text/javascript" src="/JS/jquery.js"></script>
-<script type="text/javascript" src="/lbs/boostrap_3.3.7/js/bootstrap.js"></script>
-<script type="text/javascript" src="/JS/anime.min.js"></script>
-<script type="text/javascript">
-    function btncoupon(){
-        let m =$("#coupon");
-        m.slideToggle(500);
-    }
-    function btngift(){
-        let n =$("#gift");
-        n.slideToggle(500);
-    }
-    function enter() {
-      anime({
-          targets:'#color',
-          duration:1000,
-          translateX:300,
-      });
-    }
-    function leave() {
-        anime({
-            targets:'#color',
-            duration:1000,
-            translateX:0,
-        });
-    }
-</script>
-<script type="text/javascript">
+    <script type="text/javascript" src="/JS/jquery.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap_3.3.7/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/JS/anime.min.js"></script>
+    <script type="text/javascript">
+        function btncoupon() {
+            let m = $("#coupon");
+            m.slideToggle(500);
+        }
 
-    function updatePiza() {
-        let quantityPiza = $("input[name=quantityPiza]").val();
-        quantityPiza = parseInt(quantityPiza);
-        let pricePiza = 50;
-        let sumPiza = (quantityPiza) * (pricePiza);
-        $("#sumPiza").text(sumPiza);
+        function btngift() {
+            let n = $("#gift");
+            n.slideToggle(500);
+        }
 
-        let sub_total ="";
-        sub_total += sumPiza;
-        sub_total = parseInt(sub_total);
-        let service = sub_total / 2;
-        let VAT = sub_total/10 ;
-        let total = sub_total + service +VAT;
-        $("#Sub-total").text(sub_total);
-        $("#service").text(service);
-        $("#VAT").text(VAT);
-        $("#total").text(total);
-    }
-    function removePiza() {
-        $("tr.piza").remove();
-        let sub_total =0;
-        let service = sub_total / 2;
-        let VAT = sub_total /10 ;
-        let total = sub_total + service +VAT;
-        $("#Sub-total").text(sub_total);
-        $("#service").text(service);
-        $("#VAT").text(VAT);
-        $("#total").text(total);
-    }
-</script>
+        function enter() {
+            anime({
+                targets: '#color',
+                duration: 1000,
+                translateX: 300,
+            });
+        }
+
+        function leave() {
+            anime({
+                targets: '#color',
+                duration: 1000,
+                translateX: 0,
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function updatePiza() {
+            let quantityPiza = $("input[name=quantityPiza]").val();
+            quantityPiza = parseInt(quantityPiza);
+            let pricePiza = 50;
+            let sumPiza = (quantityPiza) * (pricePiza);
+            $("#sumPiza").text(sumPiza);
+
+            let sub_total = "";
+            sub_total += sumPiza;
+            sub_total = parseInt(sub_total);
+            let service = sub_total / 2;
+            let VAT = sub_total / 10;
+            let total = sub_total + service + VAT;
+            $("#Sub-total").text(sub_total);
+            $("#service").text(service);
+            $("#VAT").text(VAT);
+            $("#total").text(total);
+        }
+
+        function removePiza() {
+            $("tr.piza").remove();
+            let sub_total = 0;
+            let service = sub_total / 2;
+            let VAT = sub_total / 10;
+            let total = sub_total + service + VAT;
+            $("#Sub-total").text(sub_total);
+            $("#service").text(service);
+            $("#VAT").text(VAT);
+            $("#total").text(total);
+        }
+    </script>
 
 </body>
+
 </html>
