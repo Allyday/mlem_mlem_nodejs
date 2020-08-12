@@ -14,26 +14,18 @@ app.get('/', (req, res) => {
   res.render(__dirname + '/views/home.ejs');
 });
 
-app.get('/login', (req, res) => {
-  const obj = {
-    name: 'HA',
-    age: 21,
-  };
-  res.send(obj);
-});
-
-app.get("/menu",(req,res) =>{
+app.get("/menu", (req, res) => {
   res.render("menu");
 });
 
-app.get("/details",(req,res) =>{
+app.get("/details", (req, res) => {
   res.render("product-details");
 });
 
-app.get("/cart",(req,res) => {
+app.get("/cart", (req, res) => {
   res.render("cart");
 });
 
-app.get("/about",(req,res) =>{
+app.get("/about", (req, res) => {
   res.render("about");
 });
